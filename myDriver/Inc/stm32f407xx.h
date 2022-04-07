@@ -49,6 +49,22 @@
 #define I2C2_BASE_ADDR				(APB1_BASE_ADDR + 0x5800UL)			/*I2C 2 Base Address	*/
 #define I2C3_BASE_ADDR				(APB1_BASE_ADDR + 0x5C00UL)			/*I2C 3 Base Address	*/
 
+/*
+ * APB2 Peripherals Base Address
+ *
+ */
+
+#define TIM1_BASE_ADDR				(APB2_BASE_ADDR + 0x0000UL)			/* Timer 1 Base Address */
+#define TIM8_BASE_ADDR				(APB2_BASE_ADDR + 0x0400UL)			/* Timer 8 Base Address */
+
+#define USART1_BASE_ADDR			(APB2_BASE_ADDR + 0x1000UL)			/* USART 1 Base Address	*/
+#define USART6_BASE_ADDR			(APB2_BASE_ADDR + 0x1400UL)			/* USART 6 Base Address	*/
+
+#define SPI1_BASE_ADDR				(APB2_BASE_ADDR + 0x3000UL)			/* SPI 1 Base Address	*/
+#define SPI4_BASE_ADDR				(APB2_BASE_ADDR + 0x3400UL)			/* SPI 4 Base Address	*/
+
+#define SYSCFG_BASE_ADDR			(APB2_BASE_ADDR + 0x3800UL)			/* SYSCFG Base Address	*/
+#define EXTI_BASE_ADDR				(APB2_BASE_ADDR + 0x3C00UL)			/* EXTI Base Address	*/
 
 
 
