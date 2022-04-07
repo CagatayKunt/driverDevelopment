@@ -66,6 +66,21 @@
 #define SYSCFG_BASE_ADDR			(APB2_BASE_ADDR + 0x3800UL)			/* SYSCFG Base Address	*/
 #define EXTI_BASE_ADDR				(APB2_BASE_ADDR + 0x3C00UL)			/* EXTI Base Address	*/
 
+/*
+ * AHB1 Peripherals Base Address
+ *
+ */
+
+#define GPIOA_BASE_ADDR				(AHB1_BASE_ADDR + 0x0000UL)			/* GPIOA Base Address	*/
+#define GPIOB_BASE_ADDR				(AHB1_BASE_ADDR + 0x0400UL)			/* GPIOB Base Address	*/
+#define GPIOC_BASE_ADDR				(AHB1_BASE_ADDR + 0x0800UL)			/* GPIOC Base Address	*/
+#define GPIOD_BASE_ADDR				(AHB1_BASE_ADDR + 0x0C00UL)			/* GPIOD Base Address	*/
+#define GPIOE_BASE_ADDR				(AHB1_BASE_ADDR + 0x1000UL)			/* GPIOE Base Address	*/
+
+#define RCC_BASE_ADDR				(AHB1_BASE_ADDR + 0x3800UL)			/* RCC Base Address		*/
+
+
+
 
 
 #endif /* INC_STM32F407XX_H_ */
