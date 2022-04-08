@@ -44,7 +44,7 @@
 #define USART2_BASE_ADDR			(APB1_BASE_ADDR + 0x4400UL)			/* USART 2 Base Address	*/
 #define USART3_BASE_ADDR			(APB1_BASE_ADDR + 0x4800UL)			/* USART 3 Base Address	*/
 #define UART4_BASE_ADDR				(APB1_BASE_ADDR + 0x4C00UL)			/* UART 4 Base Address	*/
-#define UART4_BASE_ADDR				(APB1_BASE_ADDR + 0x5000UL)			/* UART 5 Base Address	*/
+#define UART5_BASE_ADDR				(APB1_BASE_ADDR + 0x5000UL)			/* UART 5 Base Address	*/
 
 #define I2C1_BASE_ADDR				(APB1_BASE_ADDR + 0x5400UL)			/*I2C 1 Base Address	*/
 #define I2C2_BASE_ADDR				(APB1_BASE_ADDR + 0x5800UL)			/*I2C 2 Base Address	*/
