@@ -5,6 +5,9 @@
 
 #include <stdint.h>
 
+#define __IO volatile
+
+
 
 /*
  * Memory Base Address
@@ -87,20 +90,25 @@
 
 typedef struct
 {
-	uint32_t MODER;
-	uint32_t OTYPER;
-	uint32_t OSPEEDR;
-	uint32_t PUPDR;
-	uint32_t ODR;
-	uint32_t BSRR;
-	uint32_t AFR[2];
+	__IO uint32_t MODER;
+	__IO uint32_t OTYPER;
+	__IO uint32_t OSPEEDR;
+	__IO uint32_t PUPDR;
+	__IO uint32_t ODR;
+	__IO uint32_t BSRR;
+	__IO uint32_t AFR[2];
 
 }GPIO_TypeDef_t;
 
 
 
 
-#define GPIOA						( (GPIO_TpeDef_t *)(GPIO_BASE_ADDR) )
+#define GPIOA						( (GPIO_TypeDef_t *)(GPIOA_BASE_ADDR) )
+#define GPIOB						( (GPIO_TypeDef_t *)(GPIOB_BASE_ADDR) )
+#define GPIOC						( (GPIO_TypeDef_t *)(GPIOC_BASE_ADDR) )
+#define GPIOD						( (GPIO_TypeDef_t *)(GPIOD_BASE_ADDR) )
+#define GPIOE						( (GPIO_TypeDef_t *)(GPIOE_BASE_ADDR) )
+
 
 
 #endif /* INC_STM32F407XX_H_ */
