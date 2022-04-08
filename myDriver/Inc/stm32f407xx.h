@@ -3,6 +3,7 @@
 #ifndef INC_STM32F407XX_H_
 #define INC_STM32F407XX_H_
 
+#include <stdint.h>
 
 
 /*
@@ -79,8 +80,27 @@
 
 #define RCC_BASE_ADDR				(AHB1_BASE_ADDR + 0x3800UL)			/* RCC Base Address		*/
 
+/*
+ * Peripheral Structure Definitions
+ *
+ */
+
+typedef struct
+{
+	uint32_t MODER;
+	uint32_t OTYPER;
+	uint32_t OSPEEDR;
+	uint32_t PUPDR;
+	uint32_t ODR;
+	uint32_t BSRR;
+	uint32_t AFR[2];
+
+}GPIO_TypeDef_t;
 
 
+
+
+#define GPIOA						( (GPIO_TpeDef_t *)(GPIO_BASE_ADDR) )
 
 
 #endif /* INC_STM32F407XX_H_ */
