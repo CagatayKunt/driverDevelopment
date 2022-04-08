@@ -90,13 +90,15 @@
 
 typedef struct
 {
-	__IO uint32_t MODER;
-	__IO uint32_t OTYPER;
-	__IO uint32_t OSPEEDR;
-	__IO uint32_t PUPDR;
-	__IO uint32_t ODR;
-	__IO uint32_t BSRR;
-	__IO uint32_t AFR[2];
+	__IO uint32_t MODER;		/*!< GPIO port mode register 				Address Offset = 0x0000 */
+	__IO uint32_t OTYPER;		/*!< GPIO port output type register 		Address Offset = 0x0004 */
+	__IO uint32_t OSPEEDR;		/*!< GPIO port output speed register 		Address Offset = 0x0008 */
+	__IO uint32_t PUPDR;		/*!< GPIO port pull-up/pull-down register 	Address Offset = 0x000C */
+	__IO uint32_t IDR;			/*!< GPIO port input data register 			Address Offset = 0x0010 */
+	__IO uint32_t ODR;			/*!< GPIO port output data register 		Address Offset = 0x0014 */
+	__IO uint32_t BSRR;			/*!< GPIO port bit set/reset register 		Address Offset = 0x0018 */
+	__IO uint32_t LCKR;			/*!< GPIO port configuration lock register 	Address Offset = 0x001C */
+	__IO uint32_t AFR[2];		/*!< GPIO port mode register 				Address Offset = 0x0020 */
 
 }GPIO_TypeDef_t;
 
