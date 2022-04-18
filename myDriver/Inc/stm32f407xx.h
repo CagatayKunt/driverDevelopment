@@ -7,12 +7,17 @@
 
 #define __IO volatile
 
+#define SET_BIT(REG, BIT)			( (REG) |= (BIT) )
+#define CLEAR_BIT(REG, BIT)		( (REG) &= ~(BIT) )
+#define READ_BIT(REG, BIT)			( (REG) & (BIT) )
+#define UNUSED(x)					(void)x
 
 
 /*
  * Memory Base Address
  *
  */
+
 
 #define FLASH_BASE_ADDR				(0x08000000UL) /* Flash Base Address (up to 1 MB)	*/
 #define	SRAM1_BASE_ADDR				(0x20000000UL) /* SRAM1 Base Address 112 KB */
@@ -28,8 +33,8 @@
 
 #define APB1_BASE_ADDR				PERIPH_BASE_ADDR					/* APB1 Bus Domain Base Address			*/
 #define APB2_BASE_ADDR				(PERIPH_BASE_ADDR + 0x00010000UL)	/* APB2 Bus Domain Base Address			*/
-#define AHB1_BASE_ADR				(PERIPH_BASE_ADDR + 0X00020000UL)	/* AHB1 Bus Domain Base Address			*/
-#define AHB2_BASE_ADR				(PERIPH_BASE_ADDR + 0X10000000UL)	/* AHB2 Bus Domain Base Address			*/
+#define AHB1_BASE_ADDR				(PERIPH_BASE_ADDR + 0X00020000UL)	/* AHB1 Bus Domain Base Address			*/
+#define AHB2_BASE_ADDR				(PERIPH_BASE_ADDR + 0X10000000UL)	/* AHB2 Bus Domain Base Address			*/
 
 
 /*
@@ -136,17 +141,44 @@ typedef struct
 	__IO uint32_t SSCGR;				/*!< RCC spread spectrum clock generation register							Address Offset = 0x0080 */
 	__IO uint32_t PLLI2SCFGR;			/*!< RCC PLLI2S configuration register										Address Offset = 0x0084 */
 
+
 }RCC_TypeDef_t;
 
 
 
 
-#define GPIOA						( (GPIO_TypeDef_t *)(GPIOA_BASE_ADDR) )
-#define GPIOB						( (GPIO_TypeDef_t *)(GPIOB_BASE_ADDR) )
-#define GPIOC						( (GPIO_TypeDef_t *)(GPIOC_BASE_ADDR) )
-#define GPIOD						( (GPIO_TypeDef_t *)(GPIOD_BASE_ADDR) )
-#define GPIOE						( (GPIO_TypeDef_t *)(GPIOE_BASE_ADDR) )
+#define GPIOA							( (GPIO_TypeDef_t *)(GPIOA_BASE_ADDR) )
+#define GPIOB							( (GPIO_TypeDef_t *)(GPIOB_BASE_ADDR) )
+#define GPIOC							( (GPIO_TypeDef_t *)(GPIOC_BASE_ADDR) )
+#define GPIOD							( (GPIO_TypeDef_t *)(GPIOD_BASE_ADDR) )
+#define GPIOE							( (GPIO_TypeDef_t *)(GPIOE_BASE_ADDR) )
 
-#define RCC							( (RCC_TypeDef_t *)(RCC_BASE_ADDR)	  )
+#define RCC								( (RCC_TypeDef_t *)(RCC_BASE_ADDR)	  )
+
+
+/*
+ *	Bit Definitions
+ *
+ */
+
+#define RCC_AHB1ENR_GPIOAEN_Pos			(0U)								//	RCC AHB1ENR register GPIOAEN Bit Position
+#define RCC_AHB1ENR_GPIOAEN_Msk			(0x1 << RCC_AHB1ENR_GPIOAEN_Pos)	//	RCC AHB1ENR register GPIOAEN Bit Mask
+#define RCC_AHB1ENR_GPIOAEN				(RCC_AHB1ENR_GPIOAEN_Msk)			//	RCC AHB1ENR register GPIOAEN Macro
+
+#define RCC_AHB1ENR_GPIOBEN_Pos			(1U)								//	RCC AHB1ENR register GPIOAEN Bit Position
+#define RCC_AHB1ENR_GPIOBEN_Msk			(0x1 << RCC_AHB1ENR_GPIOBEN_Pos)	//	RCC AHB1ENR register GPIOAEN Bit Mask
+#define RCC_AHB1ENR_GPIOBEN				(RCC_AHB1ENR_GPIOBEN_Msk)			//	RCC AHB1ENR register GPIOAEN Macro
+
+#define RCC_AHB1ENR_GPIOCEN_Pos			(2U)								//	RCC AHB1ENR register GPIOAEN Bit Position
+#define RCC_AHB1ENR_GPIOCEN_Msk			(0x1 << RCC_AHB1ENR_GPIOCEN_Pos)	//	RCC AHB1ENR register GPIOAEN Bit Mask
+#define RCC_AHB1ENR_GPIOCEN				(RCC_AHB1ENR_GPIOCEN_Msk)			//	RCC AHB1ENR register GPIOAEN Macro
+
+#define RCC_AHB1ENR_GPIODEN_Pos			(3U)								//	RCC AHB1ENR register GPIOAEN Bit Position
+#define RCC_AHB1ENR_GPIODEN_Msk			(0x1 << RCC_AHB1ENR_GPIODEN_Pos)	//	RCC AHB1ENR register GPIOAEN Bit Mask
+#define RCC_AHB1ENR_GPIODEN				(RCC_AHB1ENR_GPIODEN_Msk)			//	RCC AHB1ENR register GPIOAEN Macro
+
+
+#include "RCC.h"
+
 
 #endif /* INC_STM32F407XX_H_ */
