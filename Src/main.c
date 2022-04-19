@@ -2,18 +2,11 @@
 #include "stm32f407xx.h"
 
 
+
+
 int main(void)
 {
 
-	RCC_GPIOA_CLK_ENABLE();
-	RCC_GPIOB_CLK_ENABLE();
-	RCC_GPIOC_CLK_ENABLE();
-	RCC_GPIOD_CLK_ENABLE();
-
-	RCC_GPIOA_CLK_DISABLE();
-	RCC_GPIOB_CLK_DISABLE();
-	RCC_GPIOC_CLK_DISABLE();
-	RCC_GPIOD_CLK_DISABLE();
 
 	for(;;);
 }

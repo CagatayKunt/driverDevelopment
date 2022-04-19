@@ -177,8 +177,8 @@ typedef struct
 #define RCC_AHB1ENR_GPIODEN_Msk			(0x1 << RCC_AHB1ENR_GPIODEN_Pos)	//	RCC AHB1ENR register GPIOAEN Bit Mask
 #define RCC_AHB1ENR_GPIODEN				(RCC_AHB1ENR_GPIODEN_Msk)			//	RCC AHB1ENR register GPIOAEN Macro
 
-
 #include "RCC.h"
+#include "GPIO.h"
 
 
 #endif /* INC_STM32F407XX_H_ */

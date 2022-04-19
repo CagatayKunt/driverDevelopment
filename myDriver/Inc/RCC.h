@@ -5,6 +5,11 @@
 
 #include "stm32f407xx.h"
 
+/*
+ * RCC AHB1 Peripherals Clock Control Macro Definitions
+ *
+ */
+
 
 #define RCC_GPIOA_CLK_ENABLE()					do{	uint32_t tempValue = 0;												\
 													SET_BIT(RCC->AHB1ENR, RCC_AHB1ENR_GPIOAEN);							\
@@ -34,6 +39,7 @@
 #define RCC_GPIOB_CLK_DISABLE()					CLEAR_BIT(RCC->AHB1ENR, RCC_AHB1ENR_GPIOBEN)
 #define RCC_GPIOC_CLK_DISABLE()					CLEAR_BIT(RCC->AHB1ENR, RCC_AHB1ENR_GPIOCEN)
 #define RCC_GPIOD_CLK_DISABLE()					CLEAR_BIT(RCC->AHB1ENR, RCC_AHB1ENR_GPIODEN)
+
 
 
 
