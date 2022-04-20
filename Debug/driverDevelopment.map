@@ -252,12 +252,14 @@ Discarded input sections
                 0x0000000000000000        0xc ./myDriver/Src/GPIO.o
  .text.GPIO_ReadPin
                 0x0000000000000000        0xc ./myDriver/Src/GPIO.o
- .debug_info    0x0000000000000000      0x206 ./myDriver/Src/GPIO.o
- .debug_abbrev  0x0000000000000000      0x11c ./myDriver/Src/GPIO.o
- .debug_loc     0x0000000000000000       0x74 ./myDriver/Src/GPIO.o
+ .text.GPIO_LockPin
+                0x0000000000000000       0x10 ./myDriver/Src/GPIO.o
+ .debug_info    0x0000000000000000      0x24d ./myDriver/Src/GPIO.o
+ .debug_abbrev  0x0000000000000000      0x138 ./myDriver/Src/GPIO.o
+ .debug_loc     0x0000000000000000       0x89 ./myDriver/Src/GPIO.o
  .debug_aranges
-                0x0000000000000000       0x28 ./myDriver/Src/GPIO.o
- .debug_ranges  0x0000000000000000       0x18 ./myDriver/Src/GPIO.o
+                0x0000000000000000       0x30 ./myDriver/Src/GPIO.o
+ .debug_ranges  0x0000000000000000       0x20 ./myDriver/Src/GPIO.o
  .debug_macro   0x0000000000000000       0x9a ./myDriver/Src/GPIO.o
  .debug_macro   0x0000000000000000      0xa78 ./myDriver/Src/GPIO.o
  .debug_macro   0x0000000000000000       0x22 ./myDriver/Src/GPIO.o
@@ -269,10 +271,10 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x16c ./myDriver/Src/GPIO.o
  .debug_macro   0x0000000000000000       0x34 ./myDriver/Src/GPIO.o
  .debug_macro   0x0000000000000000       0x6a ./myDriver/Src/GPIO.o
- .debug_line    0x0000000000000000      0x40a ./myDriver/Src/GPIO.o
- .debug_str     0x0000000000000000     0x4be6 ./myDriver/Src/GPIO.o
+ .debug_line    0x0000000000000000      0x444 ./myDriver/Src/GPIO.o
+ .debug_str     0x0000000000000000     0x4c03 ./myDriver/Src/GPIO.o
  .comment       0x0000000000000000       0x51 ./myDriver/Src/GPIO.o
- .debug_frame   0x0000000000000000       0x30 ./myDriver/Src/GPIO.o
+ .debug_frame   0x0000000000000000       0x40 ./myDriver/Src/GPIO.o
  .ARM.attributes
                 0x0000000000000000       0x2e ./myDriver/Src/GPIO.o
  .group         0x0000000000000000        0xc ./myDriver/Src/RCC.o
