@@ -1,8 +1,21 @@
 #include "GPIO.h"
 
+
+
+/*
+ *	@brief	GPIO_Write_Pin, makes pin High or Low
+ *	@param	GPIOx = GPIO Port Base Address
+ *
+ *	@param	pinNumber = GPIO Pin Number - 0 - 15
+ *
+ *	@param	pinState = GPIO_Pin_Set OR GPIO_Pin_Reset
+ *
+ *	@retval Void
+ * */
+
+
 void GPIO_WritePin(GPIO_TypeDef_t *GPIOx, uint16_t pinNumber, GPIO_PinState_t pinState)
 {
-
 
 	if(pinState == GPIO_Pin_Set)
 	{
@@ -14,6 +27,27 @@ void GPIO_WritePin(GPIO_TypeDef_t *GPIOx, uint16_t pinNumber, GPIO_PinState_t pi
 	}
 
 
+}
+
+/*
+ *	@brief	GPIO_Read_Pin, reads the pin of GPIOx Port
+ *	@param	GPIOx = GPIO Port Base Address
+ *
+ *	@param	pinNumber = GPIO Pin Number - 0 - 15
+ *
+ *
+ *	@retval GPIO_PinState_t
+ * */
+
+GPIO_PinState_t GPIO_ReadPin(GPIO_TypeDef_t *GPIOx, uint16_t pinNumber)
+{
+	GPIO_PinState_t bitStatus = GPIO_Pin_Reset;
+
+	if( (GPIOx->IDR & pinNumber) != GPIO_Pin_Reset)
+	{
+		bitStatus = GPIO_Pin_Set;
+	}
 
 
+	return bitStatus;
 }
